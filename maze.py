@@ -9,7 +9,7 @@ class Node():
         self.action = action
 
 
-class StackFrontier():
+class StackFrontier():  #for DFS
     def __init__(self):
         self.frontier = []
 
@@ -31,7 +31,7 @@ class StackFrontier():
             return node
 
 
-class QueueFrontier(StackFrontier):
+class QueueFrontier(StackFrontier):  #for BFS
 
     def remove(self):
         if self.empty():
@@ -220,6 +220,7 @@ class Maze():
 
 if len(sys.argv) != 2:
     sys.exit("Usage: python maze.py maze.txt")
+    
 
 m = Maze(sys.argv[1])
 print("Maze:")
